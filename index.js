@@ -96,10 +96,20 @@ let passwordInputTwoElement = document.querySelector("#optionTwo");
 
 function generatePassword(event) {
   event.preventDefault();
-  let randomIndexOne = Math.floor(Math.random() * characters.length);
-  let randomIndexTwo = Math.floor(Math.random() * characters.length);
-  passwordInputOneElement.innerHTML = characters[randomIndexOne];
-  passwordInputTwoElement.innerHTML = characters[randomIndexTwo];
+
+  let passwordOne = "";
+  let passwordTwo = "";
+
+  for (let i = 0; i < 15; i++) {
+    let randomIndexOne = Math.floor(Math.random() * characters.length);
+    let randomIndexTwo = Math.floor(Math.random() * characters.length);
+
+    passwordOne += characters[randomIndexOne];
+    passwordTwo += characters[randomIndexTwo];
+  }
+
+  passwordInputOneElement.innerHTML = passwordOne;
+  passwordInputTwoElement.innerHTML = passwordTwo;
 }
 buttonElement = document.querySelector("#generate-button");
 buttonElement.addEventListener("click", generatePassword);
