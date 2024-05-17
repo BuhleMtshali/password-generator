@@ -48,14 +48,14 @@ hr {
   background-color: #023047;
   margin-bottom: 20px;
 }
-input {
+button {
   padding: 15px;
   background-color: #fb8500;
   border: none;
   margin: 10px;
   border-radius: 5px;
 }
-input:focus {
+button:focus {
   border: none;
   background-color: #ced4da;
 }
