@@ -113,3 +113,24 @@ function generatePassword(event) {
 }
 buttonElement = document.querySelector("#generate-button");
 buttonElement.addEventListener("click", generatePassword);
+
+function copyToClipboard(text) {
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      alert("Copied to clipboard!");
+    })
+    .catch((err) => {
+      console.error("Failed to copy: ", err);
+    });
+}
+
+let copyButtonOne = document.querySelector("#copy-optionOne");
+copyButtonOne.addEventListener("click", () => {
+  copyToClipboard(passwordInputOneElement.innerText);
+});
+
+let copyButtonTwo = document.querySelector("#copy-optionTwo");
+copyButtonTwo.addEventListener("click", () => {
+  copyToClipboard(passwordInputTwoElement.innerText);
+});

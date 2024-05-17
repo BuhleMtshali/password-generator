@@ -1,6 +1,6 @@
 .container {
   width: 500px;
-  height: 400px;
+  height: 500px;
   background-color: #023047;
 
   margin-left: auto;
@@ -54,8 +54,20 @@ button {
   border: none;
   margin: 10px;
   border-radius: 5px;
+  display: block;
+  cursor: pointer;
 }
 button:focus {
   border: none;
   background-color: #ced4da;
+}
+#copy-optionOne {
+  background-color: #ced4da;
+  color: #fb8500;
+  font-weight: bold;
+}
+#copy-optionTwo {
+  background-color: #ced4da;
+  color: #fb8500;
+  font-weight: bold;
 }
